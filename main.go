@@ -1,9 +1,9 @@
 package callback_plugin
 
 import (
-	"callback-plugin/configs"
-	"callback-plugin/logs"
-	"callback-plugin/routes"
+	"github.com/Tuan8888/falcon-callback-plugin/configs"
+	"github.com/Tuan8888/falcon-callback-plugin/logs"
+	"github.com/Tuan8888/falcon-callback-plugin/routes"
 )
 
 func main() {

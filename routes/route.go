@@ -1,15 +1,15 @@
 package routes
 
 import (
-	"callback-plugin/configs"
-	"callback-plugin/handles"
+	"github.com/Tuan8888/falcon-callback-plugin/configs"
+	"github.com/Tuan8888/falcon-callback-plugin/handles"
 	"net/http"
 )
 
 /*
 	API
- */
+*/
 func Init() {
 	http.HandleFunc("/command", handles.CommandHandle)
-	http.ListenAndServe(configs.Cfg.Host + ":" + configs.Cfg.Port, nil)
+	http.ListenAndServe(configs.Cfg.Host+":"+configs.Cfg.Port, nil)
 }

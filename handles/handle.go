@@ -1,8 +1,8 @@
 package handles
 
 import (
-	"callback-plugin/configs"
-	"callback-plugin/logs"
+	"github.com/Tuan8888/falcon-callback-plugin/configs"
+	"github.com/Tuan8888/falcon-callback-plugin/logs"
 	"net/http"
 	"os/exec"
 )
