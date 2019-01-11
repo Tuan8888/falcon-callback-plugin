@@ -9,7 +9,7 @@ import (
 
 func CommandHandle(w http.ResponseWriter, r *http.Request) {
 	logs.Info.Println("接收到地址", r.RemoteAddr, "发送的请求", r.URL)
-	r. ParseForm()
+	r.ParseForm()
 	key := r.Form["key"]
 	if key == nil {
 		logs.Error.Println("发送请求中参数 key 不正确")
@@ -28,10 +28,10 @@ func CommandHandle(w http.ResponseWriter, r *http.Request) {
 
 /*
 	执行shell命令
- */
-func execShell(command string) []byte{
+*/
+func execShell(command string) []byte {
 	logs.Info.Println("准备执行命令", command)
-	cmd := exec.Command("sudo", "/bin/bash -c", command)
+	cmd := exec.Command("/bin/bash -c", command)
 	res, err := cmd.Output()
 	if err != nil {
 		logs.Error.Println("执行命令出错", err)
@@ -41,4 +41,3 @@ func execShell(command string) []byte{
 	logs.Info.Println(string(res))
 	return res
 }
-
