@@ -1,0 +1,14 @@
+{
+  "host": "0.0.0.0",
+  "port": "9999",
+  "mappers": [
+      {
+          "key": "restart",
+          "command": "echo restart"
+      },
+      {
+        "key": "test-sudo",
+        "command": "sudo echo hello"
+      }
+  ]
+}
