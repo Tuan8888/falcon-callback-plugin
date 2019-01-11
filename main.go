@@ -1,4 +1,4 @@
-package callback_plugin
+package main
 
 import (
 	"github.com/Tuan8888/falcon-callback-plugin/configs"
