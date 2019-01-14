@@ -31,7 +31,7 @@ func CommandHandle(w http.ResponseWriter, r *http.Request) {
 */
 func execShell(command string) []byte {
 	logs.Info.Println("准备执行命令", command)
-	cmd := exec.Command("/bin/bash", "-c", "'"+command+"'")
+	cmd := exec.Command("/bin/bash", "-c", command)
 	res, err := cmd.Output()
 	if err != nil {
 		logs.Error.Println("执行命令出错", err)
